@@ -4,7 +4,7 @@ import string
 CHARS = string.ascii_lowercase
 
 def gen_password(length):
-    password = ''.join(random.choice(CHARS) for i in range(length))
+    return ''.join(random.choice(CHARS) for i in range(length))
 
 
 print("Input the length of password you'd like: ", end='')
