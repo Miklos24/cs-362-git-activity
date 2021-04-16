@@ -1,9 +1,14 @@
 import random
 import string
 
+CHARS = string.ascii_lowercase
+
+def gen_password(length):
+    password = ''.join(random.choice(CHARS) for i in range(length))
+
+
 print("Input the length of password you'd like: ", end='')
 length = int(input())
-chars = string.ascii_lowercase
-password = ''.join(random.choice(chars) for i in range(length))
+password = gen_password(length)
 print("Here's your password - don't forget it!")
 print(password)
